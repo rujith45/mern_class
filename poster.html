@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <title>Top 5 Kamal Haasan Movies</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background-color: #1b1b1b;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: #ffbc00;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .page-description {
+      max-width: 750px;
+      text-align: center;
+      font-size: 17px;
+      margin-bottom: 40px;
+      color: #ccc;
+      font-style: italic;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .movie-card {
+      background-color: #292929;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .movie-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffbc00;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .release-genre, .movie-info-grid {
+      font-size: 14px;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    .release-genre ul {
+      list-style: square inside;
+      padding: 0;
+    }
+
+    .movie-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .summary {
+      grid-column: span 2;
+      margin-top: 10px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Top 5 Kamal Haasan Movies</h1>
+  <p class="page-description">A tribute to the legendary Kamal Haasan.</p>
+
+  <div class="movie-grid">
+
+    <div class="movie-card">
+      <img src="Nayagan.jpg" alt="Nayagan" />
+      <div class="card-content">
+        <div class="movie-title">Nayagan</div>
+        <div class="release-genre">
+          <div>Released: 1987</div>
+          <ul>
+            <li>Crime, Drama</li>
+            <li>Loosely inspired by The Godfather</li>
+          </ul>
+        </div>
+        <div class="movie-info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Saranya</div>
+          <div><strong>Director:</strong> Mani Ratnam</div>
+          <div><strong>Producer:</strong> Muktha Srinivasan</div>
+          <div class="summary"><strong>Summary:</strong> The rise of an underworld don in Bombay who becomes a revered figure among the Tamil community while battling the burden of crime and fatherhood.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img src="Indian.jpg" alt="Indian" />
+      <div class="card-content">
+        <div class="movie-title">Indian</div>
+        <div class="release-genre">
+          <div>Released: 1996</div>
+          <ul>
+            <li>Action, Thriller</li>
+            <li>Freedom fighter turned vigilante</li>
+          </ul>
+        </div>
+        <div class="movie-info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Manisha Koirala</div>
+          <div><strong>Director:</strong> Shankar</div>
+          <div><strong>Producer:</strong> A. M. Rathnam</div>
+          <div class="summary"><strong>Summary:</strong> An aged freedom fighter takes justice into his own hands to root out corruption, portraying dual roles and unforgettable makeup artistry.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img src="Anbesivam.jpg" alt="Anbe Sivam" />
+      <div class="card-content">
+        <div class="movie-title">Anbe Sivam</div>
+        <div class="release-genre">
+          <div>Released: 2003</div>
+          <ul>
+            <li>Drama, Comedy</li>
+            <li>Journey of humanity and compassion</li>
+          </ul>
+        </div>
+        <div class="movie-info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Madhavan</div>
+          <div><strong>Director:</strong> Sundar C.</div>
+          <div><strong>Producer:</strong> P. L. Thenappan</div>
+          <div class="summary"><strong>Summary:</strong> A chance travel encounter between two contrasting individuals reveals life, philosophy, and love for mankind through the teachings of compassion (Sivam).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img src="Vikram.jpg" alt="Vikram" />
+      <div class="card-content">
+        <div class="movie-title">Vikram</div>
+        <div class="release-genre">
+          <div>Released: 2022</div>
+          <ul>
+            <li>Action, Thriller</li>
+            <li>High-octane espionage</li>
+          </ul>
+        </div>
+        <div class="movie-info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Vijay Sethupathi, Fahadh Faasil</div>
+          <div><strong>Director:</strong> Lokesh Kanagaraj</div>
+          <div><strong>Producer:</strong> Raaj Kamal Films</div>
+          <div class="summary"><strong>Summary:</strong> A retired agent returns to action to dismantle a drug syndicate, showcasing a new era of Tamil action filmmaking and style.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-card">
+      <img src="Dasavathaaram.jpg" alt="Dasavathaaram" />
+      <div class="card-content">
+        <div class="movie-title">Dasavathaaram</div>
+        <div class="release-genre">
+          <div>Released: 2008</div>
+          <ul>
+            <li>Science Fiction, Drama</li>
+            <li>Kamal in 10 roles</li>
+          </ul>
+        </div>
+        <div class="movie-info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Asin</div>
+          <div><strong>Director:</strong> K. S. Ravikumar</div>
+          <div><strong>Producer:</strong> V. Ravichandran</div>
+          <div class="summary"><strong>Summary:</strong> A bio‑weapon conspiracy unravels across centuries as ten avatars of Kamal Haasan unfold in a genre‑bending performance.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
