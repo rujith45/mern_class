@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Cards - Click to Expand</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background-color: #136e80;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #a3e509;
+      text-transform: uppercase;
+    }
+
+    .pixel-box {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 15px;
+      height: 15px;
+      background-color: #a3e509;
+      border-radius: 3px;
+      box-shadow: 0 0 5px #a3e509;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .movie-card {
+      background: #0e4c5a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .movie-label {
+      display: block;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      background-color: #0e4c5a;
+      cursor: pointer;
+      color: #a3e509;
+      border-top: 1px solid #1d9ca3;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    .card-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+      background: rgba(0, 0, 0, 0.85);
+      padding: 0 15px;
+    }
+
+    input[type="checkbox"]:checked + label + .card-content {
+      max-height: 300px;
+      padding: 15px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 8px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .info-grid strong {
+      color: #a3e509;
+    }
+
+    @media(min-width: 600px) {
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Top 5 Tamil Movies</h1>
+  <div class="pixel-box"></div>
+
+  <div class="movie-grid">
+    <!-- Movie 1 -->
+    <div class="movie-card">
+      <img src="Nayagan.jpg" alt="Nayagan" />
+      <input type="checkbox" id="movie1">
+      <label class="movie-label" for="movie1">Nayagan</label>
+      <div class="card-content">
+        <div class="info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Saranya</div>
+          <div><strong>Director:</strong> Mani Ratnam</div>
+          <div><strong>Producer:</strong> Muktha Srinivasan</div>
+          <div><strong>Summary:</strong> A slum boy becomes a powerful underworld don in Bombay, fighting for justice while grappling with moral dilemmas.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 2 -->
+    <div class="movie-card">
+      <img src="Anbesivam.jpg" alt="Anbe Sivam" />
+      <input type="checkbox" id="movie2">
+      <label class="movie-label" for="movie2">Anbe Sivam</label>
+      <div class="card-content">
+        <div class="info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Madhavan</div>
+          <div><strong>Director:</strong> Sundar C</div>
+          <div><strong>Producer:</strong> K. Muralitharan</div>
+          <div><strong>Summary:</strong> A journey between two strangers with different ideologies reveals the essence of love, humanity, and God in everyone.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 3 -->
+    <div class="movie-card">
+      <img src="Indian.jpg" alt="Indian" />
+      <input type="checkbox" id="movie3">
+      <label class="movie-label" for="movie3">Indian</label>
+      <div class="card-content">
+        <div class="info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Manisha Koirala</div>
+          <div><strong>Director:</strong> Shankar</div>
+          <div><strong>Producer:</strong> A. M. Rathnam</div>
+          <div><strong>Summary:</strong> A patriotic freedom fighter turns vigilante, punishing corruption in the system with his own strict justice.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 4 -->
+    <div class="movie-card">
+      <img src="Vikram.jpg" alt="Vikram" />
+      <input type="checkbox" id="movie4">
+      <label class="movie-label" for="movie4">Vikram</label>
+      <div class="card-content">
+        <div class="info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan, Vijay Sethupathi, Fahadh Faasil</div>
+          <div><strong>Director:</strong> Lokesh Kanagaraj</div>
+          <div><strong>Producer:</strong> Kamal Haasan, R. Mahendran</div>
+          <div><strong>Summary:</strong> A black ops squad is on a mission to take down a dangerous drug syndicate led by a ruthless crime lord.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Movie 5 -->
+    <div class="movie-card">
+      <img src="Dasavathaaram.jpg" alt="Dasavathaaram" />
+      <input type="checkbox" id="movie5">
+      <label class="movie-label" for="movie5">Dasavathaaram</label>
+      <div class="card-content">
+        <div class="info-grid">
+          <div><strong>Cast:</strong> Kamal Haasan (in 10 roles), Asin</div>
+          <div><strong>Director:</strong> K. S. Ravikumar</div>
+          <div><strong>Producer:</strong> V. Ravichandran</div>
+          <div><strong>Summary:</strong> A thrilling tale of chaos theory and fate, following multiple characters played by Kamal Haasan across time and history.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
